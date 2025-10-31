@@ -25,10 +25,10 @@ export default function ProjectsIntro() {
           </h2>
           <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
             <p>
-              Our portfolio showcases a diverse range of successfully completed projects that demonstrate our commitment to quality, innovation, and timely delivery. From road construction in the Bono Region to educational facilities across multiple districts, each project reflects our dedication to building Ghana's infrastructure.
+              Our portfolio showcases a diverse range of successfully completed projects that demonstrate our commitment to quality, innovation, and timely delivery. From road construction in the Bono Region to educational facilities across multiple districts, each project reflects our dedication to building Ghana&apos;s infrastructure.
             </p>
             <p>
-              We have successfully executed projects including road construction at Berekum East Municipal, primary school facilities in Jaman South and Kwawu South districts, and special projects such as the construction of Bono Region's first-ever AstroTurf at Odumase. Each project is delivered with the same commitment to excellence, safety, and client satisfaction.
+              We have successfully executed projects including road construction at Berekum East Municipal, primary school facilities in Jaman South and Kwawu South districts, and special projects such as the construction of Bono Region&apos;s first-ever AstroTurf at Odumase. Each project is delivered with the same commitment to excellence, safety, and client satisfaction.
             </p>
             <p className="text-slate-600">
               Our project delivery approach combines technical expertise, modern equipment, skilled workforce, and rigorous quality control to ensure that every structure we build stands the test of time while meeting all regulatory and client requirements.
@@ -51,11 +51,11 @@ export default function ProjectsIntro() {
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-8">
               <h3 className="text-3xl font-bold text-white mb-4">Infrastructure Development</h3>
               <p className="text-slate-200 text-lg leading-relaxed">
-                Building critical infrastructure that connects communities and drives economic growth across Ghana's regions.
+                Building critical infrastructure that connects communities and drives economic growth across Ghana&apos;s regions.
               </p>
             </div>
           </motion.div>
@@ -67,8 +67,8 @@ export default function ProjectsIntro() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-8 border border-primary/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
+            <div className="bg-linear-to-br from-primary/5 to-blue-50 rounded-2xl p-8 border border-primary/20">
+              <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
                 <FiMapPin className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-fg">Regional Coverage</h3>
@@ -81,8 +81,8 @@ export default function ProjectsIntro() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-accent/5 to-orange-50 rounded-2xl p-8 border border-accent/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
+            <div className="bg-linear-to-br from-accent/5 to-orange-50 rounded-2xl p-8 border border-accent/20">
+              <div className="w-14 h-14 rounded-xl bg-linear-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
                 <FiTrendingUp className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-fg">Project Diversity</h3>
@@ -134,7 +134,7 @@ export default function ProjectsIntro() {
                 key={category.title}
                 className="bg-white rounded-xl p-6 border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all text-center"
               >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.color} p-3 mx-auto mb-4`}>
+                <div className={`w-12 h-12 rounded-lg bg-linear-to-br ${category.color} p-3 mx-auto mb-4`}>
                   <category.icon className="w-full h-full text-white" />
                 </div>
                 <h4 className="font-bold mb-2 text-fg">{category.title}</h4>

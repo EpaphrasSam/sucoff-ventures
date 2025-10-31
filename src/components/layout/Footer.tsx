@@ -3,7 +3,6 @@
 import * as React from "react";
 import { Link } from "@heroui/react";
 import { FiMail, FiPhone, FiMapPin, FiArrowUp } from "react-icons/fi";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const QUICK_LINKS = [
@@ -45,7 +44,7 @@ export default function Footer() {
         {/* Company Info */}
         <div>
           <Link href="/" className="inline-block mb-4">
-            <p className="font-heading text-3xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+            <p className="font-heading text-3xl font-bold bg-linear-to-r from-white to-slate-300 bg-clip-text text-transparent">
               Sucoff Ventures
             </p>
           </Link>

@@ -61,7 +61,7 @@ export default function EquipmentGrid() {
 
         {/* Equipment by Category */}
         <div className="space-y-16">
-          {Object.entries(categories).map(([category, items], catIndex) => (
+          {Object.entries(categories).map(([category, items]) => (
             <div key={category}>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -71,7 +71,7 @@ export default function EquipmentGrid() {
                 className="mb-8"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-fg mb-2">{category}</h2>
-                <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
+                <div className="h-1 w-20 bg-linear-to-r from-primary to-accent rounded-full" />
               </motion.div>
 
               <motion.div
@@ -88,7 +88,7 @@ export default function EquipmentGrid() {
                     whileHover={{ y: -8 }}
                     className="group"
                   >
-                    <div className="h-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
                       <div className="relative h-64 w-full overflow-hidden bg-slate-100">
                         <Image
                           src={item.image}
@@ -96,7 +96,7 @@ export default function EquipmentGrid() {
                           fill
                           className="object-cover group-hover:scale-110 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-transparent" />
                       </div>
                       <div className="p-6 bg-white">
                         <h3 className="text-xl font-bold mb-2 text-fg group-hover:text-primary transition-colors">

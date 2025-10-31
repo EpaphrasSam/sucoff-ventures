@@ -59,7 +59,7 @@ export default function TeamGrid() {
               whileHover={{ y: -8 }}
               className="group"
             >
-              <div className="h-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
+              <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-72 w-full overflow-hidden bg-slate-100">
                   <Image
                     src={m.image}
@@ -67,7 +67,7 @@ export default function TeamGrid() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent" />
                 </div>
                 <div className="p-6 bg-white">
                   <h3 className="text-lg font-bold mb-1 text-fg group-hover:text-primary transition-colors">

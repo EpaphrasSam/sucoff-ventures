@@ -41,7 +41,7 @@ export default function HomeProjectsPreview() {
             <span className="text-sm font-medium">Our Portfolio</span>
           </div>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
-            Featured <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-muted text-lg">Showcasing our excellence in construction</p>
         </div>
@@ -78,7 +78,7 @@ export default function HomeProjectsPreview() {
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
                       {p.category && (
                         <div className="absolute top-4 left-4">
                           <span className="px-3 py-1 rounded-full bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-medium">

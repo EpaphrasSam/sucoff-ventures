@@ -12,7 +12,7 @@ const METRICS = [
 
 export default function Expertise() {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 md:py-32 overflow-hidden">
+    <section className="relative bg-linear-to-br from-slate-900 to-slate-800 py-20 md:py-32 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] opacity-30" />
       
@@ -107,7 +107,7 @@ function MetricBar({ metric, delay }: { metric: { label: string; value: number }
       </div>
       <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
         <motion.div
-          className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
+          className="h-full bg-linear-to-r from-primary to-accent rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${width}%` }}
           transition={{ duration: 1.5, ease: "easeOut" }}

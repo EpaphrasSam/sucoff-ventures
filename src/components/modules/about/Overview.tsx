@@ -42,7 +42,7 @@ export default function AboutOverview() {
               className="group"
             >
               <div className={`h-full ${stat.bgColor} rounded-2xl p-8 border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500`}>
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${stat.color} p-3.5 mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${stat.color} p-3.5 mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                   <stat.icon className="w-full h-full text-white" />
                 </div>
                 <div className="text-3xl font-bold mb-2 text-fg">{stat.value}</div>
@@ -87,9 +87,9 @@ export default function AboutOverview() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-slate-50 to-white border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all"
+                className="flex items-center gap-4 p-4 rounded-xl bg-linear-to-r from-slate-50 to-white border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all"
               >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary to-blue-700 flex items-center justify-center flex-shrink-0">
                   <FiCheckCircle className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-medium text-fg">{feature}</span>

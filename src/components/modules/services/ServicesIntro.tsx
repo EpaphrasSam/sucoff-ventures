@@ -42,9 +42,9 @@ export default function ServicesIntro() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-8 border border-primary/20"
+            className="bg-linear-to-br from-primary/5 to-blue-50 rounded-2xl p-8 border border-primary/20"
           >
-            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
+            <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
               <FiAward className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-fg">Certified Excellence</h3>
@@ -71,9 +71,9 @@ export default function ServicesIntro() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-accent/5 to-orange-50 rounded-2xl p-8 border border-accent/20"
+            className="bg-linear-to-br from-accent/5 to-orange-50 rounded-2xl p-8 border border-accent/20"
           >
-            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
+            <div className="w-14 h-14 rounded-xl bg-linear-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
               <FiTrendingUp className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-fg">Proven Track Record</h3>
@@ -99,7 +99,7 @@ export default function ServicesIntro() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-10 md:p-12 text-white"
+          className="bg-linear-to-br from-slate-900 to-slate-800 rounded-2xl p-10 md:p-12 text-white"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>

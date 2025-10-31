@@ -105,11 +105,11 @@ export default function HomeServices() {
                 <Link href="/services" className="block h-full">
                   <div className="relative h-full bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-200 hover:border-primary/30 overflow-hidden">
                     {/* Hover Background Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${s.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                                <div className={`absolute inset-0 bg-linear-to-br ${s.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                     {/* Icon */}
                     <div className="relative mb-6">
-                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${s.color} p-3.5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                                <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${s.color} p-3.5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         <Icon className="w-full h-full text-white" />
                       </div>
                     </div>

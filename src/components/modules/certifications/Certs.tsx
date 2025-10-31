@@ -39,9 +39,9 @@ export default function Certs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-10 border border-primary/20"
+            className="bg-linear-to-br from-primary/5 to-blue-50 rounded-2xl p-10 border border-primary/20"
           >
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-blue-700 p-4 mb-6 shadow-lg">
+            <div className="w-16 h-16 rounded-xl bg-linear-to-br from-primary to-blue-700 p-4 mb-6 shadow-lg">
               <FiAward className="w-full h-full text-white" />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-fg">
@@ -70,9 +70,9 @@ export default function Certs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-accent/5 to-orange-50 rounded-2xl p-10 border border-accent/20"
+            className="bg-linear-to-br from-accent/5 to-orange-50 rounded-2xl p-10 border border-accent/20"
           >
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-orange-700 p-4 mb-6 shadow-lg">
+            <div className="w-16 h-16 rounded-xl bg-linear-to-br from-accent to-orange-700 p-4 mb-6 shadow-lg">
               <FiCheckCircle className="w-full h-full text-white" />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-fg">Quality Standards</h3>
@@ -110,7 +110,7 @@ export default function Certs() {
               whileHover={{ y: -8 }}
               className="group"
             >
-              <div className="h-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
+              <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-80 w-full overflow-hidden bg-slate-100">
                   <Image
                     src={cert.image}
@@ -118,7 +118,7 @@ export default function Certs() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
                 </div>
                 <div className="p-6 bg-white">
                   <h3 className="text-lg font-bold text-fg group-hover:text-primary transition-colors">

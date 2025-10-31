@@ -103,8 +103,8 @@ export default function Values() {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="group"
               >
-                <div className="h-full bg-gradient-to-br from-slate-50 to-white rounded-xl p-8 border border-slate-200 hover:border-primary/30 shadow-md hover:shadow-xl transition-all duration-300">
-                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${v.color} p-3.5 mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                <div className="h-full bg-linear-to-br from-slate-50 to-white rounded-xl p-8 border border-slate-200 hover:border-primary/30 shadow-md hover:shadow-xl transition-all duration-300">
+                  <div className={`w-14 h-14 rounded-lg bg-linear-to-br ${v.color} p-3.5 mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     <Icon className="w-full h-full text-white" />
                   </div>
                   <h3 className="font-bold text-lg mb-2 text-fg">{v.text}</h3>

@@ -123,7 +123,7 @@ export default function ProductsGrid() {
                 whileHover={{ y: -8 }}
                 className="group"
               >
-                <div className="h-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
                   <div className="relative h-64 w-full overflow-hidden bg-slate-100">
                     <Image
                       src={product.image}
@@ -131,8 +131,8 @@ export default function ProductsGrid() {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
-                    <div className={`absolute top-6 left-6 w-14 h-14 rounded-xl bg-gradient-to-br ${product.color} p-3.5 shadow-lg`}>
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
+                    <div className={`absolute top-6 left-6 w-14 h-14 rounded-xl bg-linear-to-br ${product.color} p-3.5 shadow-lg`}>
                       <Icon className="w-full h-full text-white" />
                     </div>
                   </div>
@@ -146,7 +146,7 @@ export default function ProductsGrid() {
                     <div className="space-y-2">
                       {product.features.map((feature) => (
                         <div key={feature} className="flex items-center gap-3">
-                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${product.color}`} />
+                          <div className={`w-1.5 h-1.5 rounded-full bg-linear-to-r ${product.color}`} />
                           <span className="text-sm text-slate-700 font-medium">{feature}</span>
                         </div>
                       ))}

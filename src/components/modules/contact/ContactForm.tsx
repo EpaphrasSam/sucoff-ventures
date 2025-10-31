@@ -28,6 +28,7 @@ const projectTypes = [
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [projectType, setProjectType] = React.useState<string>("");
 
   const {
     register,
@@ -47,7 +48,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white py-20 md:py-32">
+    <section className="bg-linear-to-b from-slate-50 to-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Info */}
@@ -62,28 +63,33 @@ export default function ContactForm() {
                 Send Us a Message
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                Fill out the form and our team will get back to you within 24 hours. We're here to answer your questions and help bring your construction project to life.
+                Fill out the form and our team will get back to you within 24
+                hours. We&apos;re here to answer your questions and help bring
+                your construction project to life.
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <FiCheckCircle className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-bold text-fg mb-2">Quick Response</h3>
                     <p className="text-sm text-muted">
-                      We respond to all inquiries within 24 hours on business days
+                      We respond to all inquiries within 24 hours on business
+                      days
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200">
-                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
                     <FiCheckCircle className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-fg mb-2">Free Consultation</h3>
+                    <h3 className="font-bold text-fg mb-2">
+                      Free Consultation
+                    </h3>
                     <p className="text-sm text-muted">
                       Get expert advice and project assessment at no cost
                     </p>
@@ -91,7 +97,7 @@ export default function ContactForm() {
                 </div>
 
                 <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <FiCheckCircle className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -122,9 +128,12 @@ export default function ContactForm() {
                   <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
                     <FiCheckCircle className="w-10 h-10 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 text-fg">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-fg">
+                    Message Sent!
+                  </h3>
                   <p className="text-slate-700 leading-relaxed">
-                    Thank you for contacting us. We'll review your message and get back to you within 24 hours.
+                    Thank you for contacting us. We&apos;ll review your message
+                    and get back to you within 24 hours.
                   </p>
                 </motion.div>
               ) : (
@@ -134,6 +143,7 @@ export default function ContactForm() {
                       {...register("name")}
                       label="Full Name"
                       placeholder="John Doe"
+                      labelPlacement="outside"
                       variant="bordered"
                       isInvalid={!!errors.name}
                       errorMessage={errors.name?.message}
@@ -149,6 +159,7 @@ export default function ContactForm() {
                       type="email"
                       label="Email Address"
                       placeholder="john@example.com"
+                      labelPlacement="outside"
                       variant="bordered"
                       isInvalid={!!errors.email}
                       errorMessage={errors.email?.message}
@@ -162,6 +173,7 @@ export default function ContactForm() {
                       type="tel"
                       label="Phone Number"
                       placeholder="+233 XX XXX XXXX"
+                      labelPlacement="outside"
                       variant="bordered"
                       isInvalid={!!errors.phone}
                       errorMessage={errors.phone?.message}
@@ -171,12 +183,19 @@ export default function ContactForm() {
                     />
                   </div>
 
-                  <div>
+                  <div className="pt-0.5">
                     <Select
-                      {...register("projectType")}
                       label="Project Type"
                       placeholder="Select a project type"
+                      labelPlacement="outside"
                       variant="bordered"
+                      selectedKeys={
+                        projectType ? new Set([projectType]) : new Set()
+                      }
+                      onSelectionChange={(keys) => {
+                        const key = Array.from(keys as Set<React.Key>)[0];
+                        setProjectType(String(key ?? ""));
+                      }}
                       isInvalid={!!errors.projectType}
                       errorMessage={errors.projectType?.message}
                       classNames={{
@@ -184,11 +203,14 @@ export default function ContactForm() {
                       }}
                     >
                       {projectTypes.map((type) => (
-                        <SelectItem key={type.value} value={type.value}>
-                          {type.label}
-                        </SelectItem>
+                        <SelectItem key={type.value}>{type.label}</SelectItem>
                       ))}
                     </Select>
+                    <input
+                      type="hidden"
+                      value={projectType}
+                      {...register("projectType")}
+                    />
                   </div>
 
                   <div>
@@ -196,6 +218,7 @@ export default function ContactForm() {
                       {...register("message")}
                       label="Project Details"
                       placeholder="Tell us about your construction project, timeline, budget, and any specific requirements..."
+                      labelPlacement="outside"
                       variant="bordered"
                       minRows={6}
                       isInvalid={!!errors.message}
@@ -218,7 +241,8 @@ export default function ContactForm() {
                   </Button>
 
                   <p className="text-xs text-center text-slate-500 mt-4">
-                    By submitting this form, you agree to our privacy policy and terms of service.
+                    By submitting this form, you agree to our privacy policy and
+                    terms of service.
                   </p>
                 </form>
               )}

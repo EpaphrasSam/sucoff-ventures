@@ -54,7 +54,7 @@ export default function Welcome() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
                 <h3 className="text-2xl font-bold text-white mb-2">10+ Years of Excellence</h3>
                 <p className="text-slate-200 text-lg">
@@ -71,8 +71,8 @@ export default function Welcome() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-8 border border-primary/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
+            <div className="bg-linear-to-br from-primary/5 to-blue-50 rounded-2xl p-8 border border-primary/20">
+              <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
                 <FiAward className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-fg">Ministry Certified</h3>
@@ -81,13 +81,13 @@ export default function Welcome() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-accent/5 to-orange-50 rounded-2xl p-8 border border-accent/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
+            <div className="bg-linear-to-br from-accent/5 to-orange-50 rounded-2xl p-8 border border-accent/20">
+              <div className="w-14 h-14 rounded-xl bg-linear-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
                 <FiUsers className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-fg">Trusted by Industry Leaders</h3>
               <p className="text-muted leading-relaxed">
-                Our success is strengthened by partnerships with some of the industry's most respected consultants, subcontractors, and institutions.
+                Our success is strengthened by partnerships with some of the industry&apos;s most respected consultants, subcontractors, and institutions.
               </p>
             </div>
           </motion.div>
@@ -135,7 +135,7 @@ export default function Welcome() {
               transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
               className="text-center p-6 rounded-xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all"
             >
-              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} p-3.5 mx-auto mb-4`}>
+              <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${item.color} p-3.5 mx-auto mb-4`}>
                 <item.icon className="w-full h-full text-white" />
               </div>
               <h3 className="font-bold mb-2 text-fg">{item.title}</h3>

@@ -3,8 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Link } from "@heroui/react";
-import { FiArrowRight, FiCalendar, FiTag } from "react-icons/fi";
+import { FiArrowRight, FiCalendar } from "react-icons/fi";
 import { news } from "@/constants/news";
 
 const containerVariants = {
@@ -67,7 +66,7 @@ export default function NewsList() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1.5 rounded-full bg-primary/90 backdrop-blur-sm text-white text-xs font-semibold">
                       {item.category}

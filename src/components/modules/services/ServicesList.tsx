@@ -63,9 +63,9 @@ export default function ServicesList() {
                 whileHover={{ y: -8 }}
                 className="group"
               >
-                <div className="h-full bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="h-full bg-linear-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
                   <div className="flex items-start gap-6 mb-6">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${colorClass} p-4 flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg`}>
+                    <div className={`w-16 h-16 rounded-xl bg-linear-to-br ${colorClass} p-4 flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg`}>
                       <Icon className="w-full h-full text-white" />
                     </div>
                     <div className="flex-1">
@@ -83,7 +83,7 @@ export default function ServicesList() {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent" />
                   </div>
                 </div>
               </motion.div>

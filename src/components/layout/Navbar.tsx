@@ -11,7 +11,6 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
   Link,
-  Button,
 } from "@heroui/react";
 
 export default function Navbar() {
@@ -34,60 +33,58 @@ export default function Navbar() {
 
   return (
     <HeroNavbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      isBordered
       maxWidth="xl"
-      className="bg-bg text-fg"
+      className="bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm"
+      height="72px"
     >
       <NavbarContent justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="lg:hidden"
         />
         <NavbarBrand>
           <Link
             href="/"
-            className="font-heading text-lg font-semibold text-primary hover:opacity-90 transition"
+            className="font-heading text-xl font-bold text-primary hover:opacity-90 transition"
           >
             Sucoff Ventures
           </Link>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-6" justify="center">
+      <NavbarContent className="hidden lg:flex gap-8" justify="center">
         {menuItems.map((item) => (
-          <NavbarItem key={item.href} isActive={isActive(item.href)}>
+          <NavbarItem key={item.href}>
             <Link
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
-              className={`text-sm transition-colors hover:text-primary ${
-                isActive(item.href) ? "text-primary" : "text-fg"
+              className={`text-sm font-medium transition-all relative ${
+                isActive(item.href)
+                  ? "text-primary"
+                  : "text-slate-700 hover:text-primary"
               }`}
             >
               {item.label}
+              {isActive(item.href) && (
+                <span className="absolute -bottom-[21px] left-0 right-0 h-0.5 bg-primary" />
+              )}
             </Link>
           </NavbarItem>
         ))}
       </NavbarContent>
 
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Button
-            as={Link}
-            href="/contact"
-            color="primary"
-            variant="solid"
-            size="sm"
-          >
-            Request Quote
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarMenu>
-        {menuItems.map((item) => (
-          <NavbarMenuItem key={item.href}>
-            <Link href={item.href} className="w-full text-fg" size="lg">
+      <NavbarMenu className="pt-6 bg-white">
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item.href}-${index}`}>
+            <Link
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className={`w-full py-3 text-lg font-medium ${
+                isActive(item.href) ? "text-primary" : "text-slate-700"
+              }`}
+            >
               {item.label}
             </Link>
           </NavbarMenuItem>

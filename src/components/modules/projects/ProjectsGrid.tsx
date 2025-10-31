@@ -29,23 +29,50 @@ const itemVariants = {
   },
 };
 
+type FilterType = "all" | "completed" | "ongoing";
+
 export default function ProjectsGrid() {
+  const [activeFilter, setActiveFilter] = React.useState<FilterType>("all");
+
+  const filteredProjects = React.useMemo(() => {
+    if (activeFilter === "all") return projects;
+    return projects.filter((p) => {
+      if (activeFilter === "completed") return p.status === "completed";
+      if (activeFilter === "ongoing") return p.status === "ongoing";
+      return true;
+    });
+  }, [activeFilter]);
+
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white py-20 md:py-32">
+    <section className="bg-linear-to-b from-slate-50 to-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
+        {/* Filter Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-12"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-fg">
-            Featured Projects
-          </h2>
-          <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-            Explore our portfolio of completed construction projects that demonstrate our capabilities and commitment to excellence
-          </p>
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {[
+              { value: "all", label: "All Work" },
+              { value: "completed", label: "Completed" },
+              { value: "ongoing", label: "Ongoing" },
+            ].map((filter) => (
+              <button
+                key={filter.value}
+                onClick={() => setActiveFilter(filter.value as FilterType)}
+                className={`px-6 py-2.5 rounded-lg font-semibold text-sm transition-all ${
+                  activeFilter === filter.value
+                    ? "bg-primary text-white shadow-lg"
+                    : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200"
+                }`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
@@ -54,8 +81,9 @@ export default function ProjectsGrid() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          key={activeFilter}
         >
-          {projects.map((p) => (
+          {filteredProjects.map((p) => (
             <motion.div
               key={p.id}
               variants={itemVariants}
@@ -70,11 +98,24 @@ export default function ProjectsGrid() {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
                     {p.category && (
                       <div className="absolute top-4 left-4">
                         <span className="px-3 py-1.5 rounded-full bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-semibold shadow-lg">
                           {p.category}
+                        </span>
+                      </div>
+                    )}
+                    {p.status && (
+                      <div className="absolute top-4 right-4">
+                        <span
+                          className={`px-3 py-1.5 rounded-full backdrop-blur-sm text-xs font-semibold shadow-lg ${
+                            p.status === "completed"
+                              ? "bg-green-500/90 text-white"
+                              : "bg-blue-500/90 text-white"
+                          }`}
+                        >
+                          {p.status === "completed" ? "Completed" : "Ongoing"}
                         </span>
                       </div>
                     )}
@@ -106,6 +147,14 @@ export default function ProjectsGrid() {
             </motion.div>
           ))}
         </motion.div>
+
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-16">
+            <p className="text-lg text-muted">
+              No projects found for this filter.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

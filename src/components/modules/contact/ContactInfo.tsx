@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { FiMail, FiPhone, FiMapPin, FiClock, FiMessageCircle, FiFileText } from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
 
 export default function ContactInfo() {
   return (
@@ -27,121 +27,129 @@ export default function ContactInfo() {
           </p>
         </motion.div>
 
-        {/* Contact Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Office Locations */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {/* Head Office */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.6 }}
             className="group"
           >
-            <div className="h-full bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-8 border border-primary/20 hover:border-primary/40 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <FiPhone className="w-7 h-7 text-white" />
+            <div className="h-full bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-8 md:p-10 border border-primary/20 hover:border-primary/40 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                <FiMapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-fg">Call Us</h3>
-              <p className="text-muted mb-4">Speak directly with our team</p>
-              <a
-                href="tel:+233244564256"
-                className="block text-primary font-semibold hover:text-primary/80 transition-colors mb-2"
-              >
-                +233 (0) 24 456 4256
-              </a>
-              <p className="text-sm text-slate-500">Mon - Fri, 8AM - 5PM</p>
+              <h3 className="text-2xl font-bold mb-4 text-fg">Head Office</h3>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm font-semibold text-slate-500 mb-1">Location</p>
+                  <p className="text-slate-700 font-medium">Goaso-Dechem</p>
+                  <p className="text-slate-700">Ahafo Region, Ghana</p>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-500 mb-1">Phone</p>
+                  <a href="tel:+233244564256" className="block text-primary font-semibold hover:text-primary/80 transition-colors mb-1">
+                    +233 (0) 24 456 4256
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-500 mb-1">Email</p>
+                  <a href="mailto:mikekwamecoffie@yahoo.com" className="block text-primary font-semibold hover:text-primary/80 transition-colors">
+                    mikekwamecoffie@yahoo.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 pt-2 text-sm text-slate-600">
+                  <FiClock className="w-4 h-4" />
+                  <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
+                </div>
+              </div>
             </div>
           </motion.div>
 
+          {/* Regional Office (Placeholder for future expansion) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
             className="group"
           >
-            <div className="h-full bg-gradient-to-br from-accent/5 to-orange-50 rounded-2xl p-8 border border-accent/20 hover:border-accent/40 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent to-orange-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <FiMail className="w-7 h-7 text-white" />
+            <div className="h-full bg-gradient-to-br from-accent/5 to-orange-50 rounded-2xl p-8 md:p-10 border border-accent/20 hover:border-accent/40 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-orange-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                <FiPhone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-fg">Email Us</h3>
-              <p className="text-muted mb-4">Send us a detailed message</p>
-              <a
-                href="mailto:mikekwamecoffie@yahoo.com"
-                className="block text-accent font-semibold hover:text-accent/80 transition-colors"
-              >
-                mikekwamecoffie@yahoo.com
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="group"
-          >
-            <div className="h-full bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-slate-300 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <FiMapPin className="w-7 h-7 text-white" />
+              <h3 className="text-2xl font-bold mb-4 text-fg">Get in Touch</h3>
+              <div className="space-y-4">
+                <p className="text-slate-700 leading-relaxed">
+                  For project inquiries, quotations, or general information, reach out to our head office during business hours.
+                </p>
+                <div className="space-y-3 pt-4">
+                  <div className="flex items-start gap-3 p-4 bg-white rounded-xl">
+                    <FiPhone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-fg mb-1">Main Line</p>
+                      <a href="tel:+233244564256" className="text-primary hover:underline">
+                        +233 (0) 24 456 4256
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-white rounded-xl">
+                    <FiMail className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-fg mb-1">Email</p>
+                      <a href="mailto:mikekwamecoffie@yahoo.com" className="text-primary hover:underline break-all">
+                        mikekwamecoffie@yahoo.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-fg">Visit Us</h3>
-              <p className="text-muted mb-4">Come see us in person</p>
-              <p className="text-slate-700 font-medium">
-                Goaso-Dechem, Ahafo Region
-              </p>
             </div>
           </motion.div>
         </div>
 
-        {/* Why Contact Us */}
+        {/* Quick Contact Cards */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-10 md:p-12 text-white"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="grid md:grid-cols-3 gap-6"
         >
-          <h3 className="font-heading text-3xl font-bold mb-8 text-center">
-            How We Can Help You
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: FiMessageCircle,
-                title: "Project Consultation",
-                desc: "Discuss your construction needs and get expert advice on project feasibility and approach",
-              },
-              {
-                icon: FiFileText,
-                title: "Request a Quote",
-                desc: "Receive detailed, transparent pricing for your construction project with no hidden costs",
-              },
-              {
-                icon: FiClock,
-                title: "Schedule a Visit",
-                desc: "Book a site visit or office meeting to discuss your project requirements in detail",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-7 h-7 text-accent" />
-                </div>
-                <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                <p className="text-slate-300 text-sm leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          {[
+            {
+              title: "Project Consultation",
+              desc: "Discuss your construction needs and get expert advice",
+              icon: "💬",
+            },
+            {
+              title: "Request a Quote",
+              desc: "Receive detailed, transparent pricing for your project",
+              icon: "📋",
+            },
+            {
+              title: "Schedule a Visit",
+              desc: "Book a site visit or office meeting to discuss details",
+              icon: "📅",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              className="text-center p-6 rounded-xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all"
+            >
+              <div className="text-4xl mb-3">{item.icon}</div>
+              <h4 className="font-bold text-lg mb-2 text-fg">{item.title}</h4>
+              <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
   );
 }
-

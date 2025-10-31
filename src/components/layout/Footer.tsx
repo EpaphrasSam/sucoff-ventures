@@ -2,131 +2,139 @@
 
 import * as React from "react";
 import { Link } from "@heroui/react";
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiTwitter, FiArrowUp } from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiArrowUp } from "react-icons/fi";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const QUICK_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Management Team", href: "/team" },
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "Equipment", href: "/equipment" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "News & Updates", href: "/news" },
+  { label: "Contact Us", href: "/contact" },
+];
+
+const LEGAL_LINKS = [
+  { id: "privacy", label: "Privacy Policy", href: "#" },
+  { id: "terms", label: "Terms of Service", href: "#" },
+  { id: "health", label: "Health & Safety", href: "#" },
+  { id: "quality", label: "Quality Assurance", href: "#" },
+  { id: "sustainability", label: "Sustainability", href: "#" },
+];
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-slate-200 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] opacity-30" />
-      
-      {/* Gradient Overlays */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+    <footer className="relative bg-dark-bg text-white overflow-hidden">
+      {/* Grid pattern overlay */}
+      <div
+        className="absolute inset-0 z-0 opacity-5"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
 
-      <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-20">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <h3 className="font-heading text-2xl font-bold mb-4 text-white">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 grid gap-12 lg:grid-cols-4 md:grid-cols-2">
+        {/* Company Info */}
+        <div>
+          <Link href="/" className="inline-block mb-4">
+            <p className="font-heading text-3xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
               Sucoff Ventures
-            </h3>
-            <p className="text-slate-400 leading-relaxed mb-6 max-w-md">
-              Building excellence across Ghana since 2015. Specialized in road construction, building projects, and civil engineering with uncompromising quality and safety standards.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3 text-slate-300">
-                <FiMapPin className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
-                <span>Goaso-Dechem, Ahafo Region, Ghana</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-300">
-                <FiPhone className="w-5 h-5 text-accent" />
-                <a href="tel:+233244564256" className="hover:text-white transition-colors">
-                  +233 (0) 24 456 4256
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-slate-300">
-                <FiMail className="w-5 h-5 text-accent" />
-                <a href="mailto:mikekwamecoffie@yahoo.com" className="hover:text-white transition-colors">
-                  mikekwamecoffie@yahoo.com
-                </a>
-              </div>
+          </Link>
+          <p className="text-slate-300 leading-relaxed mb-6">
+            Building and civil engineering focused on quality, safety, and reliability across Ghana since 2015.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-start gap-2 text-sm text-slate-400">
+              <FiMapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <span>Goaso-Dechem, Ahafo Region</span>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4 text-lg text-white">Company</h4>
-            <ul className="space-y-3">
-              {[
-                { label: "About Us", href: "/about" },
-                { label: "Our Services", href: "/services" },
-                { label: "Projects", href: "/projects" },
-                { label: "Our Team", href: "/team" },
-                { label: "Equipment", href: "/equipment" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-slate-400 hover:text-white transition-colors inline-flex items-center gap-2 group"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold mb-4 text-lg text-white">Resources</h4>
-            <ul className="space-y-3">
-              {[
-                { label: "Certifications", href: "/certifications" },
-                { label: "Contact Us", href: "/contact" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-slate-400 hover:text-white transition-colors inline-flex items-center gap-2 group"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="font-semibold mb-4 text-lg text-white">Follow Us</h4>
-              <div className="flex gap-3">
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-lg bg-slate-800 hover:bg-primary flex items-center justify-center text-slate-400 hover:text-white transition-all"
-                >
-                  <FiLinkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-lg bg-slate-800 hover:bg-primary flex items-center justify-center text-slate-400 hover:text-white transition-all"
-                >
-                  <FiTwitter className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
+            <a href="tel:+233244564256" className="flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition-colors">
+              <FiPhone className="w-4 h-4 text-primary" />
+              <span>+233 (0) 24 456 4256</span>
+            </a>
+            <a href="mailto:mikekwamecoffie@yahoo.com" className="flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition-colors break-all">
+              <FiMail className="w-4 h-4 text-primary" />
+              <span>mikekwamecoffie@yahoo.com</span>
+            </a>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="relative pt-8 border-t border-slate-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-400">
-              © {new Date().getFullYear()} Sucoff Ventures. All rights reserved.
-            </p>
-            <button
-              onClick={scrollToTop}
-              className="w-10 h-10 rounded-lg bg-slate-800 hover:bg-primary flex items-center justify-center text-slate-400 hover:text-white transition-all group"
-              aria-label="Scroll to top"
-            >
-              <FiArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
-            </button>
+        {/* Quick Links */}
+        <div>
+          <p className="font-semibold mb-6 text-lg text-white">Quick Links</p>
+          <ul className="space-y-3">
+            {QUICK_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-slate-300 hover:text-primary transition-colors text-sm"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Legal & Policies */}
+        <div>
+          <p className="font-semibold mb-6 text-lg text-white">Legal & Policies</p>
+          <ul className="space-y-3">
+            {LEGAL_LINKS.map((link) => (
+              <li key={link.id}>
+                <Link
+                  href={link.href}
+                  className="text-slate-300 hover:text-primary transition-colors text-sm"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Gallery Updates */}
+        <div>
+          <p className="font-semibold mb-6 text-lg text-white">Gallery Updates</p>
+          <div className="grid grid-cols-3 gap-2 mb-6">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div
+                key={i}
+                className="relative aspect-square rounded-lg overflow-hidden bg-slate-800 group cursor-pointer"
+              >
+                <Image
+                  src="/image.png"
+                  alt={`Gallery ${i + 1}`}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            ))}
           </div>
+          <button
+            onClick={scrollToTop}
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary/20 hover:bg-primary/30 border border-primary/30 text-primary-foreground font-semibold transition-all"
+          >
+            Scroll to Top
+            <FiArrowUp className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      <div className="relative border-t border-slate-700 py-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <p className="text-sm text-slate-400">
+            © {new Date().getFullYear()} Sucoff Ventures. All rights reserved. | Built with excellence
+          </p>
         </div>
       </div>
     </footer>

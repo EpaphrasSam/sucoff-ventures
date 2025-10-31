@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { FiTarget, FiEye, FiCheckCircle } from "react-icons/fi";
+import SectionTitle from "@/components/common/SectionTitle";
 
 export default function MissionVision() {
   return (
@@ -20,7 +21,9 @@ export default function MissionVision() {
               <div className="w-16 h-16 rounded-xl bg-linear-to-br from-primary to-blue-700 p-4 mb-6 group-hover:scale-110 transition-transform shadow-lg">
                 <FiTarget className="w-full h-full text-white" />
               </div>
-              <h2 className="font-heading text-3xl font-bold mb-4 text-fg">Our Mission</h2>
+              <div className="mb-4">
+                <SectionTitle align="left" size="md">Our Mission</SectionTitle>
+              </div>
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
                 At Sucoff Ventures, our mission is to redefine the construction landscape by driving innovation, sustainability, and excellence in every project we undertake.
               </p>
@@ -41,7 +44,9 @@ export default function MissionVision() {
               <div className="w-16 h-16 rounded-xl bg-linear-to-br from-accent to-orange-700 p-4 mb-6 group-hover:scale-110 transition-transform shadow-lg">
                 <FiEye className="w-full h-full text-white" />
               </div>
-              <h2 className="font-heading text-3xl font-bold mb-4 text-fg">Our Vision</h2>
+              <div className="mb-4">
+                <SectionTitle align="left" size="md">Our Vision</SectionTitle>
+              </div>
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
                 Our vision is to be a leading force in shaping the future of construction where cutting‑edge technologies, sustainable practices, and collaborative partnerships define the industry.
               </p>
@@ -61,7 +66,9 @@ export default function MissionVision() {
           className="bg-linear-to-br from-slate-900 to-slate-800 rounded-2xl p-10 md:p-12 text-white"
         >
           <div className="max-w-4xl">
-            <h2 className="font-heading text-3xl font-bold mb-6">What We Do</h2>
+            <div className="mb-6">
+              <SectionTitle align="left" size="md">What We Do</SectionTitle>
+            </div>
             <p className="text-lg text-slate-200 leading-relaxed mb-6">
               Sucoff Ventures, as a construction company, specializes in strategic investments and partnerships within the construction industry. We actively seek collaborations and partnerships that enhance efficiency, incorporate cutting-edge technologies, and promote sustainable practices within the construction sector.
             </p>

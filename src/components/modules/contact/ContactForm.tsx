@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button, Input, Textarea, Select, SelectItem } from "@heroui/react";
 import { FiSend, FiCheckCircle } from "react-icons/fi";
+import SectionTitle from "@/components/common/SectionTitle";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -59,9 +60,11 @@ export default function ContactForm() {
             transition={{ duration: 0.6 }}
           >
             <div className="lg:sticky lg:top-8">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-fg">
-                Send Us a Message
-              </h2>
+              <div className="mb-6">
+                <SectionTitle align="left" size="lg">
+                  Send Us a Message
+                </SectionTitle>
+              </div>
               <p className="text-lg text-slate-700 leading-relaxed mb-8">
                 Fill out the form and our team will get back to you within 24
                 hours. We&apos;re here to answer your questions and help bring

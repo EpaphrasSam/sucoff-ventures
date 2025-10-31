@@ -36,13 +36,16 @@ export default function HomeProjectsPreview() {
         className="flex items-end justify-between gap-4 mb-16"
       >
         <div>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 text-primary">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 text-primary">
             <FiStar className="text-accent" />
             <span className="text-sm font-medium">Our Portfolio</span>
           </div>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
-            Featured <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
-          </h2>
+          <div className="mb-2">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+              Featured <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
+            </h2>
+            <div className="h-1.5 w-24 bg-linear-to-r from-primary to-accent rounded-full mb-2" />
+          </div>
           <p className="text-muted text-lg">Showcasing our excellence in construction</p>
         </div>
         <Button

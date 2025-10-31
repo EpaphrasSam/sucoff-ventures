@@ -4,10 +4,10 @@ import * as React from "react";
 import { motion, useInView } from "framer-motion";
 
 const METRICS = [
-  { label: "Project Delivery", value: 98 },
-  { label: "Quality Standards", value: 96 },
-  { label: "Safety Compliance", value: 99 },
-  { label: "Client Satisfaction", value: 100 },
+  { label: "Project Delivery", value: 95 },
+  { label: "Quality Standards", value: 95 },
+  { label: "Safety Compliance", value: 95 },
+  { label: "Client Satisfaction", value: 95 },
 ];
 
 export default function Expertise() {
@@ -28,12 +28,15 @@ export default function Expertise() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold text-sm mb-4">
+          <div className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold text-sm mb-6">
             OUR EXPERTISE
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-            A Foundation of Strength and Precision
-          </h2>
+          <div className="mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-white text-center">
+              A Foundation of Strength and Precision
+            </h2>
+            <div className="h-1.5 w-24 bg-linear-to-r from-primary to-accent rounded-full mx-auto" />
+          </div>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
             With a team of experienced engineers and project managers, we deliver high-quality construction services that meet and exceed industry standards. From planning to completion, we maintain rigorous quality controls and innovative techniques to ensure strength, durability, and performance across all projects.
           </p>
@@ -71,12 +74,12 @@ export default function Expertise() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">ISO 9001</div>
-                <div className="text-sm text-slate-300">Certified Quality</div>
+                <div className="text-3xl font-bold text-white mb-2">Quality</div>
+                <div className="text-sm text-slate-300">Best Practices</div>
               </div>
               <div className="bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">100+</div>
-                <div className="text-sm text-slate-300">Projects Delivered</div>
+                <div className="text-3xl font-bold text-white mb-2">Proven</div>
+                <div className="text-sm text-slate-300">Project Portfolio</div>
               </div>
             </div>
           </motion.div>

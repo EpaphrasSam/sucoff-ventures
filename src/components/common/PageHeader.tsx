@@ -34,9 +34,12 @@ export default function PageHeader({
           <div className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold text-sm mb-6">
             {badge}
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            {title}
-          </h1>
+          <div className="mx-auto w-fit">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-3 text-white">
+              {title}
+            </h1>
+            <div className="h-1.5 w-24 bg-linear-to-r from-primary to-accent rounded-full mx-auto mb-6" />
+          </div>
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             {subtitle}
           </p>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { certifications } from "@/constants/certifications";
 import { FiAward, FiCheckCircle } from "react-icons/fi";
+import SectionTitle from "@/components/common/SectionTitle";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -44,9 +45,11 @@ export default function Certs() {
             <div className="w-16 h-16 rounded-xl bg-linear-to-br from-primary to-blue-700 p-4 mb-6 shadow-lg">
               <FiAward className="w-full h-full text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-fg">
-              Ministry of Works & Housing
-            </h3>
+            <div className="mb-4">
+              <SectionTitle align="left" size="sm">
+                Ministry of Works & Housing
+              </SectionTitle>
+            </div>
             <p className="text-muted leading-relaxed mb-6">
               Officially classified by the Ministry of Works and Housing for general building works and civil works in Ghana and beyond. This certification demonstrates our commitment to quality and compliance with national standards.
             </p>
@@ -75,13 +78,15 @@ export default function Certs() {
             <div className="w-16 h-16 rounded-xl bg-linear-to-br from-accent to-orange-700 p-4 mb-6 shadow-lg">
               <FiCheckCircle className="w-full h-full text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-fg">Quality Standards</h3>
+            <div className="mb-4">
+              <SectionTitle align="left" size="sm">Quality Standards</SectionTitle>
+            </div>
             <p className="text-muted leading-relaxed mb-6">
               Our operations adhere to international quality management standards, ensuring consistent delivery of excellence in every project we undertake across Ghana.
             </p>
             <div className="space-y-3">
               {[
-                "ISO 9001 Quality Management",
+                "Quality Management Best Practices",
                 "Safety Compliance Standards",
                 "Environmental Best Practices",
                 "Industry Best Practices",

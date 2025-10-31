@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { FiTrendingUp, FiHome, FiBriefcase, FiLayers } from "react-icons/fi";
 import { Link } from "@heroui/react";
+import SectionTitle from "@/components/common/SectionTitle";
 
 const SERVICES = [
   {
@@ -75,12 +76,14 @@ export default function HomeServices() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
+          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6">
             OUR SERVICES
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-fg">
-            Expert Construction Solutions
-          </h2>
+          <div className="mb-4">
+            <SectionTitle align="center" size="xl">
+              Expert Construction Solutions
+            </SectionTitle>
+          </div>
           <p className="text-muted text-lg max-w-2xl mx-auto">
             Comprehensive services delivered by experienced professionals
           </p>

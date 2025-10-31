@@ -11,6 +11,7 @@ import {
   FiFileText,
   FiCalendar,
 } from "react-icons/fi";
+import SectionTitle from "@/components/common/SectionTitle";
 
 export default function ContactInfo() {
   return (
@@ -24,9 +25,11 @@ export default function ContactInfo() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-fg">
-            We&apos;re Here to Help
-          </h2>
+          <div className="mb-6">
+            <SectionTitle align="center" size="lg">
+              We&apos;re Here to Help
+            </SectionTitle>
+          </div>
           <p className="text-lg text-slate-700 leading-relaxed mb-4">
             Whether you&apos;re planning a new construction project, need expert
             consultation, or have questions about our services, our team is

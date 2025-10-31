@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { FiAward, FiUsers, FiTrendingUp, FiShield } from "react-icons/fi";
 import Image from "next/image";
+import SectionTitle from "@/components/common/SectionTitle";
 
 export default function Welcome() {
   return (
@@ -22,18 +23,20 @@ export default function Welcome() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
+          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6">
             WELCOME TO SUCOFF VENTURES
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-fg">
-            A Leading Construction Company in Ghana
-          </h2>
+          <div className="mb-6">
+            <SectionTitle align="center" size="xl">
+              A Leading Construction Company in Ghana
+            </SectionTitle>
+          </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
               SUCOFF VENTURES is a leading construction company in Ghana dedicated to delivering top-quality infrastructure, innovative construction solutions, and reliable building services across the country. Our clients trust us for our technical expertise, commitment to quality, and our ability to turn bold ideas into solid, lasting structures.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              We follow standards set by the Ghana Institution of Engineers and comply with international best practices such as ISO 9001 Quality Management. Since our establishment in 2015, we have been at the forefront of indigenous road construction, building projects, and civil engineering works.
+              We follow guidance from recognized professional bodies and align our work with international quality management best practices. Since our establishment in 2015, we have been active in indigenous road construction, building projects, and civil engineering works.
             </p>
           </div>
         </motion.div>
@@ -75,9 +78,9 @@ export default function Welcome() {
               <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
                 <FiAward className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-fg">Ministry Certified</h3>
+              <h3 className="text-xl font-bold mb-3 text-fg">Committed to Standards</h3>
               <p className="text-muted leading-relaxed">
-                Officially classified by the Ministry of Works and Housing for general building works and civil works in Ghana and beyond.
+                Aligned with applicable regulations and industry guidance for building and civil works.
               </p>
             </div>
 
@@ -105,7 +108,7 @@ export default function Welcome() {
             {
               icon: FiTrendingUp,
               title: "Proven Track Record",
-              desc: "100+ successful projects delivered on time and within budget",
+              desc: "Numerous successful projects delivered on time and within budget",
               color: "from-blue-600 to-blue-700",
             },
             {
@@ -117,7 +120,7 @@ export default function Welcome() {
             {
               icon: FiAward,
               title: "Quality Assurance",
-              desc: "ISO 9001 standards ensuring excellence in every project phase",
+              desc: "Committed to quality management best practices in every project phase",
               color: "from-accent to-orange-700",
             },
             {

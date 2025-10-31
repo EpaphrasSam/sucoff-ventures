@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { FiCheckCircle, FiAward, FiTrendingUp, FiUsers } from "react-icons/fi";
+import SectionTitle from "@/components/common/SectionTitle";
 
 export default function ServicesIntro() {
   return (
@@ -19,9 +20,11 @@ export default function ServicesIntro() {
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6">
             LEADING CONSTRUCTION COMPANY IN GHANA
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-fg">
-            Comprehensive Construction Solutions
-          </h2>
+          <div className="mb-6">
+            <SectionTitle align="center" size="xl">
+              Comprehensive Construction Solutions
+            </SectionTitle>
+          </div>
           <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
             <p>
               SUCOFF VENTURES delivers quality construction for private and commercial projects, ensuring structural integrity, aesthetic value, and timely completion. Our comprehensive suite of services covers every aspect of construction—from initial planning and design to final handover and beyond.
@@ -30,7 +33,7 @@ export default function ServicesIntro() {
               We provide expert construction services for structures and finishes, delivering durable work with precision, craftsmanship, and proven reliability. Our civil engineering team constructs and maintains roads, drains, and infrastructure with durability, precision, and industry-best practices.
             </p>
             <p className="text-slate-600">
-              With certifications from the Ministry of Works and Housing and adherence to ISO 9001 Quality Management standards, we ensure that every project meets international benchmarks for quality, safety, and environmental responsibility.
+              With certification from the Ministry of Works and Housing and alignment to recognized quality management best practices, we ensure that every project meets appropriate benchmarks for quality, safety, and environmental responsibility.
             </p>
           </div>
         </motion.div>
@@ -47,14 +50,16 @@ export default function ServicesIntro() {
             <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
               <FiAward className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-fg">Certified Excellence</h3>
+            <div className="mb-4">
+              <SectionTitle align="left" size="sm">Certified Excellence</SectionTitle>
+            </div>
             <p className="text-slate-700 leading-relaxed mb-4">
               We offer precision steel structures and fabrication services for residential, commercial, and industrial applications with uncompromising quality. Our team follows standards set by the Ghana Institution of Engineers.
             </p>
             <ul className="space-y-3">
               {[
                 "Ministry of Works Certified",
-                "ISO 9001 Quality Standards",
+                "Quality Management Best Practices",
                 "International Best Practices",
                 "Ghana Institution of Engineers Standards",
               ].map((item) => (
@@ -76,18 +81,20 @@ export default function ServicesIntro() {
             <div className="w-14 h-14 rounded-xl bg-linear-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
               <FiTrendingUp className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-fg">Proven Track Record</h3>
+            <div className="mb-4">
+              <SectionTitle align="left" size="sm">Proven Track Record</SectionTitle>
+            </div>
             <p className="text-slate-700 leading-relaxed mb-6">
               Through a well-structured production schedule, innovative solutions, and a commitment to quality, we ensure clients receive durable and precisely executed construction services that meet both structural and aesthetic standards.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-4 bg-white rounded-xl border border-accent/20">
-                <div className="text-3xl font-bold text-fg mb-1">100+</div>
-                <div className="text-sm text-muted">Projects Completed</div>
+                <div className="text-3xl font-bold text-fg mb-1">Proven</div>
+                <div className="text-sm text-muted">Project Portfolio</div>
               </div>
               <div className="text-center p-4 bg-white rounded-xl border border-accent/20">
-                <div className="text-3xl font-bold text-fg mb-1">10+</div>
-                <div className="text-sm text-muted">Years Experience</div>
+                <div className="text-3xl font-bold text-fg mb-1">Experienced</div>
+                <div className="text-sm text-muted">Team Expertise</div>
               </div>
             </div>
           </motion.div>
@@ -103,7 +110,10 @@ export default function ServicesIntro() {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="font-heading text-3xl font-bold mb-6">Our Approach to Excellence</h3>
+              <div className="mb-6">
+                <h3 className="font-heading text-3xl font-bold mb-3 text-white">Our Approach to Excellence</h3>
+                <div className="h-1 w-20 bg-linear-to-r from-primary to-accent rounded-full" />
+              </div>
               <p className="text-slate-200 leading-relaxed mb-6">
                 Our experienced team, supported by industry experts, continuously enhances our offerings through product demonstrations, technical workshops, and customer engagement initiatives—empowering contractors and builders to deliver excellence on every project here in Ghana.
               </p>
@@ -113,10 +123,10 @@ export default function ServicesIntro() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: FiCheckCircle, label: "Quality Assurance", value: "100%" },
-                { icon: FiUsers, label: "Expert Team", value: "50+" },
-                { icon: FiTrendingUp, label: "On-Time Delivery", value: "98%" },
-                { icon: FiAward, label: "Client Satisfaction", value: "100%" },
+                { icon: FiCheckCircle, label: "Quality Assurance", value: "Strong" },
+                { icon: FiUsers, label: "Expert Team", value: "Skilled" },
+                { icon: FiTrendingUp, label: "On-Time Delivery", value: "Reliable" },
+                { icon: FiAward, label: "Client Satisfaction", value: "Trusted" },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <stat.icon className="w-8 h-8 text-accent mx-auto mb-3" />

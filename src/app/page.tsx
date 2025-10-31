@@ -7,7 +7,7 @@ import Welcome from "@/components/modules/home/Welcome";
 import HomeServices from "@/components/modules/home/Services";
 import Expertise from "@/components/modules/home/Expertise";
 import HomeProjectsPreview from "@/components/modules/home/ProjectsPreview";
-import News from "@/components/modules/home/News";
+ 
 
 export default function Home() {
   return (
@@ -19,7 +19,6 @@ export default function Home() {
         <HomeServices />
         <Expertise />
         <HomeProjectsPreview />
-        <News />
       </main>
       <Footer />
     </>

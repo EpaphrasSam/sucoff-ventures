@@ -25,10 +25,10 @@ const SLIDES = [
     ctaLink: "/services",
   },
   {
-    title: "Certified Quality & Safety Standards",
-    subtitle: "Ministry of Works Approved Contractor",
+    title: "Quality & Safety Focus",
+    subtitle: "Committed to recognized standards and best practices",
     description:
-      "With ISO 9001 compliance and Ministry certification, we deliver projects that exceed industry standards and client expectations.",
+      "We follow established guidelines and continuously improve our processes to meet applicable industry standards and client expectations.",
     cta: "Learn More",
     ctaLink: "/about",
   },
@@ -178,27 +178,23 @@ export default function HomeHero() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-3 gap-6 md:gap-8 text-center">
           <div>
             <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
-              10+
+              Experienced
             </div>
             <div className="text-xs md:text-sm text-slate-300">
-              Years Experience
+              Team & Delivery
             </div>
           </div>
           <div>
             <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
-              100+
+              Proven
             </div>
-            <div className="text-xs md:text-sm text-slate-300">
-              Projects Completed
-            </div>
+            <div className="text-xs md:text-sm text-slate-300">Portfolio</div>
           </div>
           <div>
             <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
-              100%
+              Client‑Focused
             </div>
-            <div className="text-xs md:text-sm text-slate-300">
-              Client Satisfaction
-            </div>
+            <div className="text-xs md:text-sm text-slate-300">Service</div>
           </div>
         </div>
       </motion.div>

@@ -13,7 +13,6 @@ const QUICK_LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "Equipment", href: "/equipment" },
   { label: "Certifications", href: "/certifications" },
-  { label: "News & Updates", href: "/news" },
   { label: "Contact Us", href: "/contact" },
 ];
 

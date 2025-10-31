@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { FiCheckCircle, FiZap, FiUsers, FiShield, FiHeart, FiTarget } from "react-icons/fi";
+import SectionTitle from "@/components/common/SectionTitle";
 
 const VALUES = [
   { 
@@ -79,9 +80,11 @@ export default function Values() {
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
             OUR VALUES
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-fg">
-            The Principles That Guide Us
-          </h2>
+          <div className="mb-6">
+            <SectionTitle align="center" size="lg">
+              The Principles That Guide Us
+            </SectionTitle>
+          </div>
           <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-8">
             At Sucoff Ventures, our foundation is built on a commitment to Constructive Excellence. With a focus on safety, sustainability, and client satisfaction, we pave the way for a resilient and transformative future in the construction industry.
           </p>

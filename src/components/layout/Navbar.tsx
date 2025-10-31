@@ -85,11 +85,14 @@ export default function Navbar() {
             <Link
               href="/"
               aria-current={isActive("/") ? "page" : undefined}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-primary relative ${
                 isActive("/") ? "text-primary" : "text-slate-700"
               }`}
             >
               Home
+              {isActive("/") && (
+                <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-linear-to-r from-primary to-accent rounded-full" />
+              )}
             </Link>
           </NavbarItem>
 
@@ -124,11 +127,14 @@ export default function Navbar() {
             <Link
               href="/services"
               aria-current={isActive("/services") ? "page" : undefined}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-primary relative ${
                 isActive("/services") ? "text-primary" : "text-slate-700"
               }`}
             >
               Services
+              {isActive("/services") && (
+                <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-linear-to-r from-primary to-accent rounded-full" />
+              )}
             </Link>
           </NavbarItem>
 
@@ -136,11 +142,14 @@ export default function Navbar() {
             <Link
               href="/projects"
               aria-current={isActive("/projects") ? "page" : undefined}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-primary relative ${
                 isActive("/projects") ? "text-primary" : "text-slate-700"
               }`}
             >
               Projects
+              {isActive("/projects") && (
+                <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-linear-to-r from-primary to-accent rounded-full" />
+              )}
             </Link>
           </NavbarItem>
 
@@ -148,11 +157,14 @@ export default function Navbar() {
             <Link
               href="/certifications"
               aria-current={isActive("/certifications") ? "page" : undefined}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-primary relative ${
                 isActive("/certifications") ? "text-primary" : "text-slate-700"
               }`}
             >
               Certifications
+              {isActive("/certifications") && (
+                <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-linear-to-r from-primary to-accent rounded-full" />
+              )}
             </Link>
           </NavbarItem>
 
@@ -160,11 +172,14 @@ export default function Navbar() {
             <Link
               href="/contact"
               aria-current={isActive("/contact") ? "page" : undefined}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-primary relative ${
                 isActive("/contact") ? "text-primary" : "text-slate-700"
               }`}
             >
               Contact
+              {isActive("/contact") && (
+                <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-linear-to-r from-primary to-accent rounded-full" />
+              )}
             </Link>
           </NavbarItem>
         </NavbarContent>

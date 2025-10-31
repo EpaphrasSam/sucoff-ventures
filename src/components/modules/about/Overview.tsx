@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { FiCalendar, FiMapPin, FiAward, FiCheckCircle } from "react-icons/fi";
+import SectionTitle from "@/components/common/SectionTitle";
 
 export default function AboutOverview() {
   return (
@@ -61,9 +62,11 @@ export default function AboutOverview() {
           className="grid md:grid-cols-2 gap-12 items-center"
         >
           <div className="space-y-6">
-            <h2 className="font-heading text-3xl font-bold text-fg">
-              Professional Construction Excellence
-            </h2>
+            <div className="mb-6">
+              <SectionTitle align="left" size="md">
+                Professional Construction Excellence
+              </SectionTitle>
+            </div>
             <p className="text-lg text-slate-700 leading-relaxed">
               Sucoff Ventures was incorporated under the Ghana Company code as a Limited Liability Company in October 2015. Our key services include indigenous road construction, building construction, and civil engineering.
             </p>
@@ -75,7 +78,7 @@ export default function AboutOverview() {
           <div className="space-y-4">
             {[
               "Ministry of Works Certified",
-              "ISO 9001 Quality Standards",
+              "Quality Management Best Practices",
               "Experienced Engineering Team",
               "Proven Project Delivery",
               "Safety-First Approach",

@@ -11,9 +11,9 @@ export default function CertificationsPage() {
     <>
       <Navbar />
       <PageHeader
-        badge="CERTIFICATIONS"
-        title="Industry Recognition & Compliance"
-        subtitle="Certified by the Ministry of Works and Housing for general building works and civil works in Ghana and beyond"
+        badge="CREDENTIALS"
+        title="Certifications & Accreditations"
+        subtitle="Officially recognized and certified by Ghana's Ministry of Works and Housing"
       />
       <Certs />
       <Footer />

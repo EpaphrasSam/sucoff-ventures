@@ -12,8 +12,8 @@ export default function EquipmentPage() {
       <Navbar />
       <PageHeader
         badge="PLANTS & EQUIPMENT"
-        title="Modern Construction Equipment"
-        subtitle="State-of-the-art machinery and tools ensuring efficiency, safety, and quality in every project"
+        title="Modern Construction Machinery"
+        subtitle="State-of-the-art equipment fleet ensuring efficiency and precision across all projects"
       />
       <EquipmentGrid />
       <Footer />

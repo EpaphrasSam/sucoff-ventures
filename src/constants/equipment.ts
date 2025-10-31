@@ -1,10 +1,65 @@
-export type Equipment = { name: string; image: string };
-
-export const equipment: Equipment[] = [
-	{ name: "Concrete Mixer", image: "/image.png" },
-	{ name: "Vibratory Compactor", image: "/image.png" },
-	{ name: "Drilling Equipment", image: "/image.png" },
-	{ name: "Concrete Vibrator", image: "/image.png" },
-	{ name: "KIA Pickup Truck", image: "/image.png" },
-	{ name: "Wheelbarrow", image: "/image.png" },
+export const equipment = [
+  {
+    id: "concrete-mixer",
+    name: "Concrete Mixer",
+    category: "Concrete Equipment",
+    description: "High-capacity concrete mixing equipment for large-scale projects",
+    image: "/image.png",
+  },
+  {
+    id: "vibratory-compactor",
+    name: "Vibratory Compactor",
+    category: "Compaction Equipment",
+    description: "Heavy-duty compaction machinery for road and foundation works",
+    image: "/image.png",
+  },
+  {
+    id: "drilling-equipment",
+    name: "Drilling Equipment",
+    category: "Foundation Tools",
+    description: "Professional drilling tools for deep foundation and piling works",
+    image: "/image.png",
+  },
+  {
+    id: "concrete-vibrator",
+    name: "Concrete Vibrator",
+    category: "Concrete Equipment",
+    description: "Industrial vibrators ensuring proper concrete consolidation",
+    image: "/image.png",
+  },
+  {
+    id: "kia-pickup",
+    name: "KIA Pick-up Truck",
+    category: "Transportation",
+    description: "Fleet of reliable trucks for material transportation and logistics",
+    image: "/image.png",
+  },
+  {
+    id: "wheelbarrows",
+    name: "Wheelbarrows",
+    category: "Hand Tools",
+    description: "Heavy-duty wheelbarrows for efficient material handling on site",
+    image: "/image.png",
+  },
+  {
+    id: "excavator",
+    name: "Excavators",
+    category: "Heavy Machinery",
+    description: "Modern excavators for earth moving and site preparation",
+    image: "/image.png",
+  },
+  {
+    id: "bulldozer",
+    name: "Bulldozers",
+    category: "Heavy Machinery",
+    description: "Powerful bulldozers for land clearing and grading operations",
+    image: "/image.png",
+  },
+  {
+    id: "concrete-pump",
+    name: "Concrete Pumps",
+    category: "Concrete Equipment",
+    description: "High-pressure pumps for efficient concrete placement",
+    image: "/image.png",
+  },
 ];

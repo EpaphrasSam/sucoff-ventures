@@ -2,14 +2,45 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { FiCheckCircle, FiZap, FiUsers, FiShield, FiHeart } from "react-icons/fi";
+import { FiCheckCircle, FiZap, FiUsers, FiShield, FiHeart, FiTarget } from "react-icons/fi";
 
 const VALUES = [
-  { text: "Precision in delivery", icon: FiCheckCircle, color: "from-blue-600 to-blue-700" },
-  { text: "Innovation in every project", icon: FiZap, color: "from-accent to-orange-700" },
-  { text: "Collaboration at every level", icon: FiUsers, color: "from-green-600 to-green-700" },
-  { text: "Safety and sustainability", icon: FiShield, color: "from-purple-600 to-purple-700" },
-  { text: "Client satisfaction", icon: FiHeart, color: "from-red-600 to-red-700" },
+  { 
+    text: "Precision in delivery", 
+    desc: "We value precision in every detail, ensuring accuracy from planning to execution",
+    icon: FiCheckCircle, 
+    color: "from-blue-600 to-blue-700" 
+  },
+  { 
+    text: "Innovation in every project", 
+    desc: "Embracing cutting-edge technologies and modern construction methodologies",
+    icon: FiZap, 
+    color: "from-accent to-orange-700" 
+  },
+  { 
+    text: "Collaboration at every level", 
+    desc: "Working together with clients, partners, and stakeholders for shared success",
+    icon: FiUsers, 
+    color: "from-primary to-blue-700" 
+  },
+  { 
+    text: "Safety and sustainability", 
+    desc: "Prioritizing worker safety and environmental responsibility in all operations",
+    icon: FiShield, 
+    color: "from-blue-600 to-blue-700" 
+  },
+  { 
+    text: "Client satisfaction", 
+    desc: "Exceeding expectations and building lasting relationships through quality service",
+    icon: FiHeart, 
+    color: "from-accent to-orange-700" 
+  },
+  { 
+    text: "Constructive excellence", 
+    desc: "Building not just structures, but lasting relationships and a legacy of excellence",
+    icon: FiTarget, 
+    color: "from-slate-700 to-slate-800" 
+  },
 ];
 
 const containerVariants = {
@@ -36,7 +67,7 @@ const itemVariants = {
 
 export default function Values() {
   return (
-    <section className="relative bg-gradient-to-b from-white to-slate-50 py-16 md:py-24">
+    <section className="bg-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,11 +79,11 @@ export default function Values() {
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
             OUR VALUES
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-fg">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-fg">
             The Principles That Guide Us
           </h2>
-          <p className="text-muted text-lg max-w-2xl mx-auto">
-            Core values that shape everything we do
+          <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-8">
+            At Sucoff Ventures, our foundation is built on a commitment to Constructive Excellence. With a focus on safety, sustainability, and client satisfaction, we pave the way for a resilient and transformative future in the construction industry.
           </p>
         </motion.div>
 
@@ -72,11 +103,12 @@ export default function Values() {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="group"
               >
-                <div className="h-full bg-white rounded-xl p-8 border border-slate-200 hover:border-primary/30 shadow-md hover:shadow-xl transition-all duration-300">
+                <div className="h-full bg-gradient-to-br from-slate-50 to-white rounded-xl p-8 border border-slate-200 hover:border-primary/30 shadow-md hover:shadow-xl transition-all duration-300">
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${v.color} p-3.5 mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     <Icon className="w-full h-full text-white" />
                   </div>
-                  <p className="font-semibold text-lg text-fg">{v.text}</p>
+                  <h3 className="font-bold text-lg mb-2 text-fg">{v.text}</h3>
+                  <p className="text-muted text-sm leading-relaxed">{v.desc}</p>
                 </div>
               </motion.div>
             );

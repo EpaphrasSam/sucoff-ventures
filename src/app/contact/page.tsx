@@ -4,6 +4,7 @@ import * as React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeader from "@/components/common/PageHeader";
+import ContactInfo from "@/components/modules/contact/ContactInfo";
 import ContactForm from "@/components/modules/contact/ContactForm";
 
 export default function ContactPage() {
@@ -11,10 +12,11 @@ export default function ContactPage() {
     <>
       <Navbar />
       <PageHeader
-        badge="CONTACT US"
+        badge="GET IN TOUCH"
         title="Let's Build Together"
-        subtitle="Have a project in mind? Get in touch and let's bring your vision to life with professional construction services"
+        subtitle="Ready to start your next construction project? Contact us today for a consultation and quote"
       />
+      <ContactInfo />
       <ContactForm />
       <Footer />
     </>

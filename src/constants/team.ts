@@ -1,16 +1,58 @@
-export type TeamMember = {
-	name: string;
-	title: string;
-	image: string;
-};
-
-export const team: TeamMember[] = [
-	{ name: "Michael Cofie", title: "Managing Director", image: "/image.png" },
-	{ name: "Paul Adu", title: "Project Manager", image: "/image.png" },
-	{ name: "Ernest Boakye", title: "Architect", image: "/image.png" },
-	{ name: "Daniel Adjei", title: "Site Engineer", image: "/image.png" },
-	{ name: "King Cedi", title: "Administrator", image: "/image.png" },
-	{ name: "Susan Yayra Cofie", title: "Secretary", image: "/image.png" },
-	{ name: "Augustine Kyei", title: "Accountant", image: "/image.png" },
-	{ name: "Richard Newton", title: "Quantity Surveyor", image: "/image.png" },
+export const team = [
+  {
+    name: "Michael Coffie",
+    title: "Managing Director",
+    qualification: "MSc. Construction Management",
+    experience: "20 years",
+    image: "/image.png",
+  },
+  {
+    name: "Paul Adu",
+    title: "Project Manager",
+    qualification: "MSc. Project Management",
+    experience: "15 years",
+    image: "/image.png",
+  },
+  {
+    name: "Ernest Boakye",
+    title: "Architect",
+    qualification: "BSc Architecture",
+    experience: "7 years",
+    image: "/image.png",
+  },
+  {
+    name: "Daniel Adjei",
+    title: "Site Engineer",
+    qualification: "BSc Civil Engineering",
+    experience: "7 years",
+    image: "/image.png",
+  },
+  {
+    name: "King Cedi",
+    title: "Administrator",
+    qualification: "BSc. Computer Science",
+    experience: "7 years",
+    image: "/image.png",
+  },
+  {
+    name: "Susan Yayra Coffie",
+    title: "Secretary",
+    qualification: "BA Business Administration",
+    experience: "12 years",
+    image: "/image.png",
+  },
+  {
+    name: "Augustine Kyei",
+    title: "Accountant",
+    qualification: "BA Business Administration",
+    experience: "5 years",
+    image: "/image.png",
+  },
+  {
+    name: "Richard Newton",
+    title: "Quantity Surveyor",
+    qualification: "BSc. Quant Surveying & Const. Economics",
+    experience: "10 years",
+    image: "/image.png",
+  },
 ];

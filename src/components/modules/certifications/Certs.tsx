@@ -103,8 +103,13 @@ export default function Certs() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {certifications.map((cert) => (
-            <motion.div key={cert.id} variants={itemVariants} whileHover={{ y: -8 }} className="group">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.id ?? `${cert.title}-${index}`}
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
+              className="group"
+            >
               <div className="h-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-80 w-full overflow-hidden bg-slate-100">
                   <Image

@@ -11,9 +11,9 @@ export default function TeamPage() {
     <>
       <Navbar />
       <PageHeader
-        badge="OUR TEAM"
-        title="Expert Leadership & Management"
-        subtitle="Meet the experienced professionals driving excellence in construction and project delivery across Ghana"
+        badge="LEADERSHIP"
+        title="Meet Our Expert Team"
+        subtitle="Experienced professionals driving excellence in construction and project delivery"
       />
       <TeamGrid />
       <Footer />

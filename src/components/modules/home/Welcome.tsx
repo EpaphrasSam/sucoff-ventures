@@ -2,7 +2,13 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { FiAward, FiUsers, FiTrendingUp, FiShield } from "react-icons/fi";
+import {
+  FiAward,
+  FiUsers,
+  FiTrendingUp,
+  FiShield,
+  FiPackage,
+} from "react-icons/fi";
 import Image from "next/image";
 import SectionTitle from "@/components/common/SectionTitle";
 
@@ -33,10 +39,18 @@ export default function Welcome() {
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-              SUCOFF VENTURES is a leading construction company in Ghana dedicated to delivering top-quality infrastructure, innovative construction solutions, and reliable building services across the country. Our clients trust us for our technical expertise, commitment to quality, and our ability to turn bold ideas into solid, lasting structures.
+              SUCOFF VENTURES is a leading construction company in Ghana
+              dedicated to delivering top-quality infrastructure, innovative
+              construction solutions, and reliable building services across the
+              country. Our clients trust us for our technical expertise,
+              commitment to quality, and our ability to turn bold ideas into
+              solid, lasting structures.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              We follow guidance from recognized professional bodies and align our work with international quality management best practices. Since our establishment in 2015, we have been active in indigenous road construction, building projects, and civil engineering works.
+              We follow guidance from recognized professional bodies and align
+              our work with international quality management best practices.
+              Since our establishment in 2015, we have been active in indigenous
+              road construction, building projects, and civil engineering works.
             </p>
           </div>
         </motion.div>
@@ -59,9 +73,12 @@ export default function Welcome() {
               />
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-2xl font-bold text-white mb-2">10+ Years of Excellence</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  10+ Years of Excellence
+                </h3>
                 <p className="text-slate-200 text-lg">
-                  Delivering impactful construction experience marked by quality, integrity, and client satisfaction across Ghana.
+                  Delivering impactful construction experience marked by
+                  quality, integrity, and client satisfaction across Ghana.
                 </p>
               </div>
             </div>
@@ -78,9 +95,12 @@ export default function Welcome() {
               <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary to-blue-700 flex items-center justify-center mb-6">
                 <FiAward className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-fg">Committed to Standards</h3>
+              <h3 className="text-xl font-bold mb-3 text-fg">
+                Committed to Standards
+              </h3>
               <p className="text-muted leading-relaxed">
-                Aligned with applicable regulations and industry guidance for building and civil works.
+                Aligned with applicable regulations and industry guidance for
+                building and civil works.
               </p>
             </div>
 
@@ -88,9 +108,13 @@ export default function Welcome() {
               <div className="w-14 h-14 rounded-xl bg-linear-to-br from-accent to-orange-700 flex items-center justify-center mb-6">
                 <FiUsers className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-fg">Trusted by Industry Leaders</h3>
+              <h3 className="text-xl font-bold mb-3 text-fg">
+                Trusted by Industry Leaders
+              </h3>
               <p className="text-muted leading-relaxed">
-                Our success is strengthened by partnerships with some of the industry&apos;s most respected consultants, subcontractors, and institutions.
+                Our success is strengthened by partnerships with some of the
+                industry&apos;s most respected consultants, subcontractors, and
+                institutions.
               </p>
             </div>
           </motion.div>
@@ -102,7 +126,7 @@ export default function Welcome() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"
         >
           {[
             {
@@ -129,6 +153,12 @@ export default function Welcome() {
               desc: "Highly qualified engineers and project managers with decades of experience",
               color: "from-slate-700 to-slate-800",
             },
+            {
+              icon: FiPackage,
+              title: "Plastic Waste Management",
+              desc: "Dedicated to minimizing plastic waste and promoting eco-friendly solutions for sustainable construction",
+              color: "from-green-600 to-green-700",
+            },
           ].map((item, index) => (
             <motion.div
               key={item.title}
@@ -138,7 +168,9 @@ export default function Welcome() {
               transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
               className="text-center p-6 rounded-xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all"
             >
-              <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${item.color} p-3.5 mx-auto mb-4`}>
+              <div
+                className={`w-14 h-14 rounded-xl bg-linear-to-br ${item.color} p-3.5 mx-auto mb-4`}
+              >
                 <item.icon className="w-full h-full text-white" />
               </div>
               <h3 className="font-bold mb-2 text-fg">{item.title}</h3>
@@ -150,4 +182,3 @@ export default function Welcome() {
     </section>
   );
 }
-

@@ -5,7 +5,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeader from "@/components/common/PageHeader";
 import ContactInfo from "@/components/modules/contact/ContactInfo";
-import ContactForm from "@/components/modules/contact/ContactForm";
 
 export default function ContactPage() {
   return (

@@ -32,17 +32,17 @@ export default function ProjectGallery({
     };
   }, [isOpen]);
 
-  const goToPrevious = () => {
+  const goToPrevious = React.useCallback(() => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+  }, [images.length]);
 
-  const goToNext = () => {
+  const goToNext = React.useCallback(() => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+  }, [images.length]);
 
-  const goToImage = (index: number) => {
+  const goToImage = React.useCallback((index: number) => {
     setCurrentIndex(index);
-  };
+  }, []);
 
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -54,7 +54,7 @@ export default function ProjectGallery({
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen]);
+  }, [isOpen, goToPrevious, goToNext, onClose]);
 
   if (images.length === 0) return null;
 

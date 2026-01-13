@@ -66,7 +66,7 @@ export default function Welcome() {
           >
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/image.png"
+                src="/projects/memano-school/3.png"
                 alt="Construction site"
                 fill
                 className="object-cover"

@@ -7,9 +7,14 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Button, Link } from "@heroui/react";
 import { FiArrowRight, FiMapPin, FiChevronLeft, FiChevronRight, FiStar } from "react-icons/fi";
 import { projects } from "@/constants/projects";
+import ProjectGallery from "@/components/modules/projects/ProjectGallery";
 
 export default function HomeProjectsPreview() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, dragFree: false, align: "start" });
+  const [selectedProject, setSelectedProject] = React.useState<{
+    images: string[];
+    title: string;
+  } | null>(null);
 
   // Autoplay
   React.useEffect(() => {
@@ -72,8 +77,13 @@ export default function HomeProjectsPreview() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="min-w-0 basis-full sm:basis-[48%] lg:basis-[31%] flex-shrink-0"
               >
-                <Link href={`/projects/${p.id}`} className="block group">
-                  <div className="relative h-full rounded-2xl overflow-hidden bg-white border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-300">
+                <button
+                  onClick={() =>
+                    setSelectedProject({ images: p.images, title: p.title })
+                  }
+                  className="w-full text-left block group"
+                >
+                  <div className="relative h-full rounded-2xl overflow-hidden bg-white border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
                     <div className="relative h-64 w-full overflow-hidden">
                       <Image
                         src={p.image}
@@ -81,11 +91,18 @@ export default function HomeProjectsPreview() {
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
-                                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
                       {p.category && (
                         <div className="absolute top-4 left-4">
                           <span className="px-3 py-1 rounded-full bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-medium">
                             {p.category}
+                          </span>
+                        </div>
+                      )}
+                      {p.images.length > 1 && (
+                        <div className="absolute top-4 right-4">
+                          <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-medium">
+                            {p.images.length} photos
                           </span>
                         </div>
                       )}
@@ -106,12 +123,12 @@ export default function HomeProjectsPreview() {
                         </div>
                       )}
                       <div className="mt-4 flex items-center text-primary font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                        View details
+                        View gallery
                         <FiArrowRight className="w-4 h-4 ml-2" />
                       </div>
                     </div>
                   </div>
-                </Link>
+                </button>
               </motion.div>
             ))}
           </div>
@@ -152,6 +169,15 @@ export default function HomeProjectsPreview() {
           View all projects
         </Button>
       </div>
+
+      {selectedProject && (
+        <ProjectGallery
+          isOpen={!!selectedProject}
+          onClose={() => setSelectedProject(null)}
+          images={selectedProject.images}
+          title={selectedProject.title}
+        />
+      )}
     </section>
   );
 }

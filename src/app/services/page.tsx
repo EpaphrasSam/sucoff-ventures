@@ -14,7 +14,7 @@ export default function ServicesPage() {
       <PageHeader
         badge="OUR SERVICES"
         title="Comprehensive Construction Solutions"
-        subtitle="Expert services in road construction, building projects, and civil engineering delivered with precision and excellence"
+        subtitle="Expert services in plastic pollution management, building projects, and civil engineering delivered with precision and excellence"
       />
       <ServicesIntro />
       <ServicesList />

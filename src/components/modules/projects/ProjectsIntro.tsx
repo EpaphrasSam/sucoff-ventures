@@ -60,7 +60,7 @@ export default function ProjectsIntro() {
             className="relative h-96 rounded-2xl overflow-hidden shadow-2xl group"
           >
             <Image
-              src="/image.png"
+              src="/projects/berekum-road/3.png"
               alt="Project showcase"
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-700"

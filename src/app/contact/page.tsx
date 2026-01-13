@@ -17,7 +17,6 @@ export default function ContactPage() {
         subtitle="Ready to start your next construction project? Contact us today for a consultation and quote"
       />
       <ContactInfo />
-      <ContactForm />
       <Footer />
     </>
   );

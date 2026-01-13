@@ -33,13 +33,6 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sucoff Ventures | Building Excellence Across Ghana",
-    description:
-      "Leading construction company in Ghana delivering roads, buildings, and civil engineering with uncompromising quality and safety.",
-    images: ["/image.png"],
-  },
 };
 
 export default function RootLayout({

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
+import { Button } from "@heroui/react";
 import {
   FiMail,
   FiPhone,
@@ -36,10 +37,34 @@ export default function ContactInfo() {
             ready to assist you. We&apos;re committed to providing prompt,
             professional responses to all inquiries.
           </p>
-          <p className="text-slate-600 leading-relaxed">
+          <p className="text-slate-600 leading-relaxed mb-8">
             Contact us today to discuss how we can bring your construction
             vision to life with quality, precision, and reliability.
           </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              as="a"
+              href="tel:+233244564256"
+              color="primary"
+              size="lg"
+              startContent={<FiPhone className="w-5 h-5" />}
+              className="font-semibold px-8"
+            >
+              Call Us Now
+            </Button>
+            <Button
+              as="a"
+              href="mailto:mikekwamecoffie@yahoo.com"
+              variant="bordered"
+              size="lg"
+              startContent={<FiMail className="w-5 h-5" />}
+              className="font-semibold px-8 border-primary text-primary hover:bg-primary/5"
+            >
+              Send Email
+            </Button>
+          </div>
         </motion.div>
 
         {/* Office Locations */}
@@ -62,7 +87,7 @@ export default function ContactInfo() {
                   <p className="text-sm font-semibold text-slate-500 mb-1">
                     Location
                   </p>
-                  <p className="text-slate-700 font-medium">Goaso-Dechem</p>
+                  <p className="text-slate-700 font-medium">Goaso-Bechem</p>
                   <p className="text-slate-700">Ahafo Region, Ghana</p>
                 </div>
                 <div>

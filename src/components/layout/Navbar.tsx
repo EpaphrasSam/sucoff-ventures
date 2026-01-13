@@ -123,7 +123,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 flex-wrap">
             <div className="flex items-center gap-2">
               <FiMapPin className="w-3.5 h-3.5 text-accent" />
-              <span className="text-slate-300">Goaso-Dechem, Ahafo Region</span>
+              <span className="text-slate-300">Goaso-Bechem, Ahafo Region</span>
             </div>
             <a
               href="tel:+233244564256"

@@ -4,7 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { team } from "@/constants/team";
-import { FiLinkedin, FiMail, FiAward, FiBriefcase } from "react-icons/fi";
+import { FiAward, FiBriefcase } from "react-icons/fi";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -84,21 +84,6 @@ export default function TeamGrid() {
                       <FiBriefcase className="w-4 h-4 text-primary flex-shrink-0" />
                       <span>{m.experience} experience</span>
                     </div>
-                  </div>
-
-                  <div className="flex justify-center gap-2 pt-3 border-t border-slate-200 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <a
-                      href="#"
-                      className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                    >
-                      <FiLinkedin className="w-4 h-4" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                    >
-                      <FiMail className="w-4 h-4" />
-                    </a>
                   </div>
                 </div>
               </div>

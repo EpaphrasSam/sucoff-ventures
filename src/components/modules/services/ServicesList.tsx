@@ -4,17 +4,17 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { services } from "@/constants/services";
-import { FiTrendingUp, FiHome, FiBriefcase, FiLayers } from "react-icons/fi";
+import { FiTrash2, FiHome, FiBriefcase, FiLayers } from "react-icons/fi";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  road: FiTrendingUp,
+  plastic: FiTrash2,
   building: FiHome,
   civil: FiLayers,
   pm: FiBriefcase,
 };
 
 const colorMap: Record<string, string> = {
-  road: "from-primary to-blue-700",
+  plastic: "from-green-600 to-green-700",
   building: "from-blue-600 to-blue-700",
   civil: "from-accent to-orange-700",
   pm: "from-slate-700 to-slate-800",

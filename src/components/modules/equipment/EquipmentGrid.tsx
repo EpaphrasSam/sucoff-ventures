@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { equipment } from "@/constants/equipment";
+import ProjectGallery from "@/components/modules/projects/ProjectGallery";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,6 +29,11 @@ const itemVariants = {
 };
 
 export default function EquipmentGrid() {
+  const [selectedGallery, setSelectedGallery] = React.useState<{
+    images: string[];
+    title: string;
+  } | null>(null);
+
   // Group equipment by category
   const categories = React.useMemo(() => {
     const grouped: Record<string, typeof equipment> = {};
@@ -41,7 +47,8 @@ export default function EquipmentGrid() {
   }, []);
 
   return (
-    <section className="bg-white py-20 md:py-32">
+    <>
+      <section className="bg-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Introduction */}
         <motion.div
@@ -88,23 +95,30 @@ export default function EquipmentGrid() {
                     whileHover={{ y: -8 }}
                     className="group"
                   >
-                    <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
-                      <div className="relative h-64 w-full overflow-hidden bg-slate-100">
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-transparent" />
+                    <button
+                      onClick={() =>
+                        setSelectedGallery({ images: [item.image], title: item.name })
+                      }
+                      className="w-full text-left"
+                    >
+                      <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+                        <div className="relative h-64 w-full overflow-hidden bg-slate-100">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-transparent" />
+                        </div>
+                        <div className="p-6 bg-white">
+                          <h3 className="text-xl font-bold mb-2 text-fg group-hover:text-primary transition-colors">
+                            {item.name}
+                          </h3>
+                          <p className="text-muted text-sm leading-relaxed">{item.description}</p>
+                        </div>
                       </div>
-                      <div className="p-6 bg-white">
-                        <h3 className="text-xl font-bold mb-2 text-fg group-hover:text-primary transition-colors">
-                          {item.name}
-                        </h3>
-                        <p className="text-muted text-sm leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
+                    </button>
                   </motion.div>
                 ))}
               </motion.div>
@@ -113,5 +127,15 @@ export default function EquipmentGrid() {
         </div>
       </div>
     </section>
+
+    {selectedGallery && (
+      <ProjectGallery
+        isOpen={!!selectedGallery}
+        onClose={() => setSelectedGallery(null)}
+        images={selectedGallery.images}
+        title={selectedGallery.title}
+      />
+    )}
+    </>
   );
 }

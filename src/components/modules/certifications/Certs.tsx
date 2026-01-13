@@ -6,6 +6,7 @@ import Image from "next/image";
 import { certifications } from "@/constants/certifications";
 import { FiAward, FiCheckCircle } from "react-icons/fi";
 import SectionTitle from "@/components/common/SectionTitle";
+import ProjectGallery from "@/components/modules/projects/ProjectGallery";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,8 +31,14 @@ const itemVariants = {
 };
 
 export default function Certs() {
+  const [selectedGallery, setSelectedGallery] = React.useState<{
+    images: string[];
+    title: string;
+  } | null>(null);
+
   return (
-    <section className="bg-white py-20 md:py-32">
+    <>
+      <section className="bg-white py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Key Certifications */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -115,26 +122,43 @@ export default function Certs() {
               whileHover={{ y: -8 }}
               className="group"
             >
-              <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500">
-                <div className="relative h-80 w-full overflow-hidden bg-slate-100">
-                  <Image
-                    src={cert.image}
-                    alt={cert.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
+              <button
+                onClick={() =>
+                  setSelectedGallery({ images: [cert.image], title: cert.title })
+                }
+                className="w-full text-left"
+              >
+                <div className="h-full rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+                  <div className="relative h-80 w-full overflow-hidden bg-slate-100">
+                    <Image
+                      src={cert.image}
+                      alt={cert.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
+                  </div>
+                  <div className="p-6 bg-white">
+                    <h3 className="text-lg font-bold text-fg group-hover:text-primary transition-colors">
+                      {cert.title}
+                    </h3>
+                  </div>
                 </div>
-                <div className="p-6 bg-white">
-                  <h3 className="text-lg font-bold text-fg group-hover:text-primary transition-colors">
-                    {cert.title}
-                  </h3>
-                </div>
-              </div>
+              </button>
             </motion.div>
           ))}
         </motion.div>
       </div>
     </section>
+
+    {selectedGallery && (
+      <ProjectGallery
+        isOpen={!!selectedGallery}
+        onClose={() => setSelectedGallery(null)}
+        images={selectedGallery.images}
+        title={selectedGallery.title}
+      />
+    )}
+    </>
   );
 }

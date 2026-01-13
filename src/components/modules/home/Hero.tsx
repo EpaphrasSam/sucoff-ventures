@@ -15,6 +15,7 @@ const SLIDES = [
       "From design to handover, we deliver modern buildings that meet the highest standards of quality, safety, and style.",
     cta: "View Projects",
     ctaLink: "/projects",
+    image: "/projects/memano-school/1.png",
   },
   {
     title: "Engineered for Scale and Performance",
@@ -23,6 +24,7 @@ const SLIDES = [
       "We build durable roads and civil infrastructure that power development and connectivity across Ghana's regions.",
     cta: "Our Services",
     ctaLink: "/services",
+    image: "/projects/berekum-road/1.png",
   },
   {
     title: "Quality & Safety Focus",
@@ -31,6 +33,7 @@ const SLIDES = [
       "We follow established guidelines and continuously improve our processes to meet applicable industry standards and client expectations.",
     cta: "Learn More",
     ctaLink: "/about",
+    image: "/projects/bepong-school/1.png",
   },
 ];
 
@@ -121,8 +124,8 @@ export default function HomeHero() {
                     </div>
                     <div className="hidden lg:flex justify-center items-center relative w-full h-80 md:h-96">
                       <Image
-                        src="/image.png"
-                        alt="Construction site"
+                        src={s.image}
+                        alt={s.title}
                         fill
                         className="object-cover rounded-2xl shadow-2xl border border-primary/20"
                       />

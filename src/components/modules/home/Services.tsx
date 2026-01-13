@@ -2,17 +2,17 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { FiTrendingUp, FiHome, FiBriefcase, FiLayers } from "react-icons/fi";
+import { FiTrash2, FiHome, FiBriefcase, FiLayers } from "react-icons/fi";
 import { Link } from "@heroui/react";
 import SectionTitle from "@/components/common/SectionTitle";
 
 const SERVICES = [
   {
-    title: "Road Construction",
-    desc: "Professional road infrastructure and drainage systems built to international standards with precision engineering.",
-    icon: FiTrendingUp,
-    color: "from-primary to-blue-700",
-    bgGradient: "from-blue-50 to-blue-100/50",
+    title: "Plastic Pollution Management",
+    desc: "Comprehensive solutions for plastic waste reduction, recycling initiatives, and sustainable environmental practices to protect our communities.",
+    icon: FiTrash2,
+    color: "from-green-600 to-green-700",
+    bgGradient: "from-green-50 to-green-100/50",
   },
   {
     title: "Building Construction",

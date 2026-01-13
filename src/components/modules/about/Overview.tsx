@@ -29,7 +29,7 @@ export default function AboutOverview() {
             {
               icon: FiMapPin,
               value: "Ahafo Region",
-              label: "Goaso-Dechem",
+              label: "Goaso-Bechem",
               color: "from-accent to-orange-700",
               bgColor: "bg-orange-50",
             },
@@ -42,11 +42,17 @@ export default function AboutOverview() {
               transition={{ duration: 0.6, delay: 0.1 * index }}
               className="group"
             >
-              <div className={`h-full ${stat.bgColor} rounded-2xl p-8 border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500`}>
-                  <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${stat.color} p-3.5 mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+              <div
+                className={`h-full ${stat.bgColor} rounded-2xl p-8 border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500`}
+              >
+                <div
+                  className={`w-14 h-14 rounded-xl bg-linear-to-br ${stat.color} p-3.5 mb-6 group-hover:scale-110 transition-transform shadow-lg`}
+                >
                   <stat.icon className="w-full h-full text-white" />
                 </div>
-                <div className="text-3xl font-bold mb-2 text-fg">{stat.value}</div>
+                <div className="text-3xl font-bold mb-2 text-fg">
+                  {stat.value}
+                </div>
                 <div className="text-muted font-medium">{stat.label}</div>
               </div>
             </motion.div>
@@ -68,10 +74,17 @@ export default function AboutOverview() {
               </SectionTitle>
             </div>
             <p className="text-lg text-slate-700 leading-relaxed">
-              Sucoff Ventures was incorporated under the Ghana Company code as a Limited Liability Company in October 2015. Our key services include indigenous road construction, building construction, and civil engineering.
+              Sucoff Ventures was incorporated under the Ghana Company code as a
+              Limited Liability Company in October 2015. Our key services
+              include indigenous road construction, building construction, and
+              civil engineering.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              At Sucoff Ventures, we focus on identifying and supporting construction ventures that exhibit unparalleled potential. Our head office is located at Goaso-Dechem, Ahafo Region, where we orchestrate projects that transform communities and infrastructure across Ghana.
+              At Sucoff Ventures, we focus on identifying and supporting
+              construction ventures that exhibit unparalleled potential. Our
+              head office is located at Goaso-Bechem, Ahafo Region, where we
+              orchestrate projects that transform communities and infrastructure
+              across Ghana.
             </p>
           </div>
 

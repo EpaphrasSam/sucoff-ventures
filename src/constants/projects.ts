@@ -20,6 +20,7 @@ export const projects: Project[] = [
       "/projects/berekum-road/2.png",
       "/projects/berekum-road/3.png",
       "/projects/berekum-road/4.png",
+      "/projects/berekum-road/5.png",
     ],
     category: "Road Construction",
   },

@@ -42,3 +42,12 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 600;
 }
+
+/* Hide scrollbar but keep element scrollable */
+.custom-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}

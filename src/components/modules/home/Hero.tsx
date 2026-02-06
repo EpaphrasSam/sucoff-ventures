@@ -178,26 +178,28 @@ export default function HomeHero() {
         transition={{ duration: 1, delay: 0.5 }}
         className="relative bg-slate-800/50 backdrop-blur-sm border-t border-white/10 py-6 md:py-8"
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-3 gap-6 md:gap-8 text-center">
-          <div>
-            <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
-              Experienced
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="custom-scrollbar flex flex-nowrap gap-6 md:grid md:grid-cols-3 md:gap-8 overflow-x-auto overflow-y-hidden scroll-smooth -mx-4 px-4 md:mx-0 md:px-0 text-center">
+            <div className="flex-shrink-0 min-w-[140px] md:min-w-0">
+              <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
+                Experienced
+              </div>
+              <div className="text-xs md:text-sm text-slate-300">
+                Team & Delivery
+              </div>
             </div>
-            <div className="text-xs md:text-sm text-slate-300">
-              Team & Delivery
+            <div className="flex-shrink-0 min-w-[140px] md:min-w-0">
+              <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
+                Proven
+              </div>
+              <div className="text-xs md:text-sm text-slate-300">Portfolio</div>
             </div>
-          </div>
-          <div>
-            <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
-              Proven
+            <div className="flex-shrink-0 min-w-[140px] md:min-w-0">
+              <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
+                Client‑Focused
+              </div>
+              <div className="text-xs md:text-sm text-slate-300">Service</div>
             </div>
-            <div className="text-xs md:text-sm text-slate-300">Portfolio</div>
-          </div>
-          <div>
-            <div className="text-2xl md:text-3xl font-bold mb-1 text-accent">
-              Client‑Focused
-            </div>
-            <div className="text-xs md:text-sm text-slate-300">Service</div>
           </div>
         </div>
       </motion.div>

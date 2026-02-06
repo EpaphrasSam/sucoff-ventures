@@ -19,6 +19,7 @@
 
 # production
 /build
+sucoff-ventures-deploy.zip
 
 # misc
 .DS_Store

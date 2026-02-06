@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "node scripts/build-and-zip.js",
     "start": "next start",
     "lint": "eslint"
   },
@@ -22,6 +23,7 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "archiver": "^7.0.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

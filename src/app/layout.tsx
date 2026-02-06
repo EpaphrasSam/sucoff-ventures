@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/providers";
 
+const siteUrl = "https://www.sucoffventures.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Sucoff Ventures | Building Excellence Across Ghana",
     template: "%s | Sucoff Ventures",
@@ -21,17 +24,24 @@ export const metadata: Metadata = {
     title: "Sucoff Ventures | Building Excellence Across Ghana",
     description:
       "Leading construction company in Ghana delivering roads, buildings, and civil engineering with uncompromising quality and safety.",
-    url: "https://sucoff.ventures/",
+    url: siteUrl,
     siteName: "Sucoff Ventures",
     images: [
       {
-        url: "/image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Sucoff Ventures",
       },
     ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sucoff Ventures | Building Excellence Across Ghana",
+    description:
+      "Leading construction company in Ghana delivering roads, buildings, and civil engineering with uncompromising quality and safety.",
+    images: ["/og-image.png"],
   },
 };
 
